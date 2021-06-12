@@ -27,7 +27,7 @@ def index():
             return redirect('/')
         except:
             return "Error occured"
-
+#
     else:
         tasks = ToDO.query.order_by(ToDO.date_created).all()
         return render_template('index.html', tasks= tasks)
